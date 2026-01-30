@@ -123,57 +123,57 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| CLI-01 | TBD | Pending |
-| CLI-02 | TBD | Pending |
-| CLI-03 | TBD | Pending |
-| CLI-04 | TBD | Pending |
-| CLI-05 | TBD | Pending |
-| CLI-06 | TBD | Pending |
-| CLI-07 | TBD | Pending |
-| DISC-01 | TBD | Pending |
-| DISC-02 | TBD | Pending |
-| DISC-03 | TBD | Pending |
-| DISC-04 | TBD | Pending |
-| DISC-05 | TBD | Pending |
-| DISC-06 | TBD | Pending |
-| PARSE-01 | TBD | Pending |
-| PARSE-02 | TBD | Pending |
-| PARSE-03 | TBD | Pending |
-| PARSE-04 | TBD | Pending |
-| PARSE-05 | TBD | Pending |
-| PARSE-06 | TBD | Pending |
-| EMBED-01 | TBD | Pending |
-| EMBED-02 | TBD | Pending |
-| EMBED-03 | TBD | Pending |
-| EMBED-04 | TBD | Pending |
-| EMBED-05 | TBD | Pending |
-| EMBED-06 | TBD | Pending |
-| SAFETY-01 | TBD | Pending |
-| SAFETY-02 | TBD | Pending |
-| SAFETY-03 | TBD | Pending |
-| SAFETY-04 | TBD | Pending |
-| SAFETY-05 | TBD | Pending |
-| SAFETY-06 | TBD | Pending |
-| SAFETY-07 | TBD | Pending |
-| ERROR-01 | TBD | Pending |
-| ERROR-02 | TBD | Pending |
-| ERROR-03 | TBD | Pending |
-| ERROR-04 | TBD | Pending |
-| ERROR-05 | TBD | Pending |
-| VALID-01 | TBD | Pending |
-| VALID-02 | TBD | Pending |
-| VALID-03 | TBD | Pending |
-| VALID-04 | TBD | Pending |
-| XPLAT-01 | TBD | Pending |
-| XPLAT-02 | TBD | Pending |
-| XPLAT-03 | TBD | Pending |
-| XPLAT-04 | TBD | Pending |
+| CLI-01 | Phase 4 | Pending |
+| CLI-02 | Phase 4 | Pending |
+| CLI-03 | Phase 4 | Pending |
+| CLI-04 | Phase 4 | Pending |
+| CLI-05 | Phase 4 | Pending |
+| CLI-06 | Phase 4 | Pending |
+| CLI-07 | Phase 4 | Pending |
+| DISC-01 | Phase 1 | Pending |
+| DISC-02 | Phase 1 | Pending |
+| DISC-03 | Phase 1 | Pending |
+| DISC-04 | Phase 1 | Pending |
+| DISC-05 | Phase 1 | Pending |
+| DISC-06 | Phase 1 | Pending |
+| PARSE-01 | Phase 1 | Pending |
+| PARSE-02 | Phase 1 | Pending |
+| PARSE-03 | Phase 1 | Pending |
+| PARSE-04 | Phase 1 | Pending |
+| PARSE-05 | Phase 1 | Pending |
+| PARSE-06 | Phase 1 | Pending |
+| EMBED-01 | Phase 3 | Pending |
+| EMBED-02 | Phase 3 | Pending |
+| EMBED-03 | Phase 3 | Pending |
+| EMBED-04 | Phase 3 | Pending |
+| EMBED-05 | Phase 3 | Pending |
+| EMBED-06 | Phase 3 | Pending |
+| SAFETY-01 | Phase 2 | Pending |
+| SAFETY-02 | Phase 2 | Pending |
+| SAFETY-03 | Phase 2 | Pending |
+| SAFETY-04 | Phase 2 | Pending |
+| SAFETY-05 | Phase 2 | Pending |
+| SAFETY-06 | Phase 2 | Pending |
+| SAFETY-07 | Phase 2 | Pending |
+| ERROR-01 | Phase 4 | Pending |
+| ERROR-02 | Phase 4 | Pending |
+| ERROR-03 | Phase 4 | Pending |
+| ERROR-04 | Phase 4 | Pending |
+| ERROR-05 | Phase 4 | Pending |
+| VALID-01 | Phase 3 | Pending |
+| VALID-02 | Phase 3 | Pending |
+| VALID-03 | Phase 3 | Pending |
+| VALID-04 | Phase 3 | Pending |
+| XPLAT-01 | Phase 4 | Pending |
+| XPLAT-02 | Phase 4 | Pending |
+| XPLAT-03 | Phase 4 | Pending |
+| XPLAT-04 | Phase 4 | Pending |
 
 **Coverage:**
 - v1 requirements: 44 total
-- Mapped to phases: 0 (pending roadmap)
-- Unmapped: 44 ⚠️
+- Mapped to phases: 44
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-01-30*
-*Last updated: 2026-01-30 after initial definition*
+*Last updated: 2026-01-30 after roadmap creation*
