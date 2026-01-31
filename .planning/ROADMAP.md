@@ -29,12 +29,12 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Tool correctly parses YAML frontmatter and markdown content from SKILL.md files
   4. Tool concatenates multi-file skills (reference.md, templates/) in correct order
   5. Tool handles missing directories and malformed files with clear error messages
-**Plans**: TBD
+**Plans**: 3 plans in 2 waves
 
 Plans:
-- [ ] 01-01: TBD
-- [ ] 01-02: TBD
-- [ ] 01-03: TBD
+- [ ] 01-01-PLAN.md — Project setup, types, and path utilities (Wave 1)
+- [ ] 01-02-PLAN.md — File discovery for skills and commands (Wave 2)
+- [ ] 01-03-PLAN.md — Content parsing and markdown concatenation (Wave 2)
 
 ### Phase 2: Safe File Operations
 **Goal**: Implement backup and atomic write mechanisms that prevent data loss
