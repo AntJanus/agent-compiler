@@ -12,7 +12,7 @@ Agent Compiler delivers a CLI tool that embeds Claude Code skills and commands i
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation** - File discovery, parsing, and path utilities
+- [x] **Phase 1: Foundation** - File discovery, parsing, and path utilities
 - [ ] **Phase 2: Safe File Operations** - Backups and atomic write operations
 - [ ] **Phase 3: Core Embedding** - Content merging and section management
 - [ ] **Phase 4: CLI & Polish** - Interactive interface and cross-platform support
@@ -32,9 +32,9 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 3 plans in 2 waves
 
 Plans:
-- [ ] 01-01-PLAN.md — Project setup, types, and path utilities (Wave 1)
-- [ ] 01-02-PLAN.md — File discovery for skills and commands (Wave 2)
-- [ ] 01-03-PLAN.md — Content parsing and markdown concatenation (Wave 2)
+- [x] 01-01-PLAN.md — Project setup, types, and path utilities (Wave 1)
+- [x] 01-02-PLAN.md — File discovery for skills and commands (Wave 2)
+- [x] 01-03-PLAN.md — Content parsing and markdown concatenation (Wave 2)
 
 ### Phase 2: Safe File Operations
 **Goal**: Implement backup and atomic write mechanisms that prevent data loss
@@ -46,11 +46,12 @@ Plans:
   3. Tool uses atomic write operations (write-to-temp-then-rename) for all file modifications
   4. Tool halts with clear error if backup creation fails
   5. User can restore from backup using simple command
-**Plans**: TBD
+**Plans**: 3 plans in 2 waves
 
 Plans:
-- [ ] 02-01: TBD
-- [ ] 02-02: TBD
+- [ ] 02-01-PLAN.md — Backup infrastructure with hash verification (Wave 1)
+- [ ] 02-02-PLAN.md — Atomic write with temp-then-rename pattern (Wave 1)
+- [ ] 02-03-PLAN.md — Safe write orchestrator and restore mechanism (Wave 2)
 
 ### Phase 3: Core Embedding
 **Goal**: Implement content merging logic that embeds skills/commands into CLAUDE.md
@@ -94,7 +95,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | ✓ Complete | 2026-02-03 |
-| 2. Safe File Operations | 0/2 | Not started | - |
+| 2. Safe File Operations | 0/3 | Not started | - |
 | 3. Core Embedding | 0/2 | Not started | - |
 | 4. CLI & Polish | 0/3 | Not started | - |
 
