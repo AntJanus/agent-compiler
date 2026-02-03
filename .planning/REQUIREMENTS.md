@@ -19,21 +19,21 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### File Discovery
 
-- [ ] **DISC-01**: Tool discovers skills from `~/.claude/skills/` (global)
-- [ ] **DISC-02**: Tool discovers skills from `./.claude/skills/` (project)
-- [ ] **DISC-03**: Tool discovers commands from `./.claude/commands/`
-- [ ] **DISC-04**: Tool differentiates global vs project skills in selection UI
-- [ ] **DISC-05**: Tool handles missing directories gracefully with clear messages
-- [ ] **DISC-06**: User can filter/search skills in large lists
+- [x] **DISC-01**: Tool discovers skills from `~/.claude/skills/` (global)
+- [x] **DISC-02**: Tool discovers skills from `./.claude/skills/` (project)
+- [x] **DISC-03**: Tool discovers commands from `./.claude/commands/`
+- [x] **DISC-04**: Tool differentiates global vs project skills in selection UI
+- [x] **DISC-05**: Tool handles missing directories gracefully with clear messages
+- [x] **DISC-06**: User can filter/search skills in large lists
 
 ### Content Parsing
 
-- [ ] **PARSE-01**: Tool parses YAML frontmatter from SKILL.md files
-- [ ] **PARSE-02**: Tool extracts markdown content from SKILL.md files
-- [ ] **PARSE-03**: Tool concatenates referenced markdown files from skill directories
-- [ ] **PARSE-04**: Tool skips non-markdown files during concatenation
-- [ ] **PARSE-05**: Tool validates YAML structure and provides clear errors for malformed files
-- [ ] **PARSE-06**: Tool handles YAML edge cases correctly (Norway problem, octal, sexagesimal)
+- [x] **PARSE-01**: Tool parses YAML frontmatter from SKILL.md files
+- [x] **PARSE-02**: Tool extracts markdown content from SKILL.md files
+- [x] **PARSE-03**: Tool concatenates referenced markdown files from skill directories
+- [x] **PARSE-04**: Tool skips non-markdown files during concatenation
+- [x] **PARSE-05**: Tool validates YAML structure and provides clear errors for malformed files
+- [x] **PARSE-06**: Tool handles YAML edge cases correctly (Norway problem, octal, sexagesimal)
 
 ### Content Embedding
 
@@ -130,18 +130,18 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CLI-05 | Phase 4 | Pending |
 | CLI-06 | Phase 4 | Pending |
 | CLI-07 | Phase 4 | Pending |
-| DISC-01 | Phase 1 | Pending |
-| DISC-02 | Phase 1 | Pending |
-| DISC-03 | Phase 1 | Pending |
-| DISC-04 | Phase 1 | Pending |
-| DISC-05 | Phase 1 | Pending |
-| DISC-06 | Phase 1 | Pending |
-| PARSE-01 | Phase 1 | Pending |
-| PARSE-02 | Phase 1 | Pending |
-| PARSE-03 | Phase 1 | Pending |
-| PARSE-04 | Phase 1 | Pending |
-| PARSE-05 | Phase 1 | Pending |
-| PARSE-06 | Phase 1 | Pending |
+| DISC-01 | Phase 1 | Complete |
+| DISC-02 | Phase 1 | Complete |
+| DISC-03 | Phase 1 | Complete |
+| DISC-04 | Phase 1 | Complete |
+| DISC-05 | Phase 1 | Complete |
+| DISC-06 | Phase 1 | Complete |
+| PARSE-01 | Phase 1 | Complete |
+| PARSE-02 | Phase 1 | Complete |
+| PARSE-03 | Phase 1 | Complete |
+| PARSE-04 | Phase 1 | Complete |
+| PARSE-05 | Phase 1 | Complete |
+| PARSE-06 | Phase 1 | Complete |
 | EMBED-01 | Phase 3 | Pending |
 | EMBED-02 | Phase 3 | Pending |
 | EMBED-03 | Phase 3 | Pending |
