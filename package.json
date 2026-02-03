@@ -11,10 +11,17 @@
     "build": "tsc",
     "dev": "tsc --watch"
   },
-  "keywords": ["claude", "ai", "skills", "commands", "cli"],
+  "keywords": [
+    "claude",
+    "ai",
+    "skills",
+    "commands",
+    "cli"
+  ],
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
     "@types/node": "^22.0.0",
     "typescript": "^5.6.0"
   },
