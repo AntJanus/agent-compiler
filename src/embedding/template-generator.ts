@@ -17,6 +17,10 @@ export interface TemplateOptions {
  * Generate a minimal template for a new CLAUDE.md file.
  * This template is ONLY used when the target file doesn't exist (ENOENT).
  * For existing files, user content is preserved as-is.
+ *
+ * Note: Template does NOT include section headings (## SKILLS, ## COMMANDS).
+ * The merger will add those sections with actual content.
+ * This prevents empty sections and ensures consistency with merge flow.
  */
 export function generateTemplate(options: TemplateOptions): string {
   const parts: string[] = [];
@@ -29,22 +33,9 @@ export function generateTemplate(options: TemplateOptions): string {
   parts.push('# CLAUDE');
   parts.push('');
   parts.push('[Add your project-specific instructions here]');
-  parts.push('');
 
-  // Separator
-  parts.push('---');
-  parts.push('');
-
-  // Optional section headings
-  if (options.includeSkills) {
-    parts.push('## SKILLS');
-    parts.push('');
-  }
-
-  if (options.includeCommands) {
-    parts.push('## COMMANDS');
-    parts.push('');
-  }
+  // No separator or section headings - the merger will add those
+  // when embedding skills/commands
 
   // Join with newlines and trim trailing whitespace
   return parts.join('\n').trimEnd();
