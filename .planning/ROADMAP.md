@@ -63,11 +63,12 @@ Plans:
   3. Tool inserts selected skills and commands with proper markdown structure
   4. Tool preserves all original user content outside embedded sections
   5. Tool validates output file structure after compilation
-**Plans**: TBD
+**Plans**: 3 plans in 2 waves
 
 Plans:
-- [ ] 03-01: TBD
-- [ ] 03-02: TBD
+- [ ] 03-01-PLAN.md — Section boundary detection and content splitting (Wave 1)
+- [ ] 03-02-PLAN.md — Section generation and template creation (Wave 1)
+- [ ] 03-03-PLAN.md — Merge orchestrator with idempotency and validation (Wave 2)
 
 ### Phase 4: CLI & Polish
 **Goal**: Deliver interactive CLI interface with cross-platform reliability
@@ -96,7 +97,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | ✓ Complete | 2026-02-03 |
 | 2. Safe File Operations | 3/3 | ✓ Complete | 2026-02-04 |
-| 3. Core Embedding | 0/2 | Not started | - |
+| 3. Core Embedding | 0/3 | Ready for execution | - |
 | 4. CLI & Polish | 0/3 | Not started | - |
 
 ---
