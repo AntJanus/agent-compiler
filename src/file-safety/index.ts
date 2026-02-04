@@ -1,3 +1,9 @@
+// Atomic file write operations
+export { atomicWrite } from './atomic-writer.js';
+
+// Markdown structure validation
+export { validateMarkdownStructure, type ValidationResult } from './markdown-validator.js';
+
 // Hash generation utilities
 export { generateContentHash, generateBackupFilename } from './hash-generator.js';
 
