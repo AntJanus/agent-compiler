@@ -46,13 +46,13 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### File Safety
 
-- [ ] **SAFETY-01**: Tool creates timestamped backup before overwriting files
-- [ ] **SAFETY-02**: Tool validates backup exists and is readable before proceeding
-- [ ] **SAFETY-03**: Tool uses atomic write operations (write-to-temp-then-rename)
-- [ ] **SAFETY-04**: Tool halts operation if backup creation fails
-- [ ] **SAFETY-05**: Tool enforces UTF-8 encoding for all file operations
-- [ ] **SAFETY-06**: User can undo compilation by restoring from backup
-- [ ] **SAFETY-07**: Tool fails fast with clear error if write operation fails
+- [x] **SAFETY-01**: Tool creates timestamped backup before overwriting files
+- [x] **SAFETY-02**: Tool validates backup exists and is readable before proceeding
+- [x] **SAFETY-03**: Tool uses atomic write operations (write-to-temp-then-rename)
+- [x] **SAFETY-04**: Tool halts operation if backup creation fails
+- [x] **SAFETY-05**: Tool enforces UTF-8 encoding for all file operations
+- [x] **SAFETY-06**: User can undo compilation by restoring from backup
+- [x] **SAFETY-07**: Tool fails fast with clear error if write operation fails
 
 ### Error Handling
 
@@ -148,13 +148,13 @@ Which phases cover which requirements. Updated during roadmap creation.
 | EMBED-04 | Phase 3 | Pending |
 | EMBED-05 | Phase 3 | Pending |
 | EMBED-06 | Phase 3 | Pending |
-| SAFETY-01 | Phase 2 | Pending |
-| SAFETY-02 | Phase 2 | Pending |
-| SAFETY-03 | Phase 2 | Pending |
-| SAFETY-04 | Phase 2 | Pending |
-| SAFETY-05 | Phase 2 | Pending |
-| SAFETY-06 | Phase 2 | Pending |
-| SAFETY-07 | Phase 2 | Pending |
+| SAFETY-01 | Phase 2 | Complete |
+| SAFETY-02 | Phase 2 | Complete |
+| SAFETY-03 | Phase 2 | Complete |
+| SAFETY-04 | Phase 2 | Complete |
+| SAFETY-05 | Phase 2 | Complete |
+| SAFETY-06 | Phase 2 | Complete |
+| SAFETY-07 | Phase 2 | Complete |
 | ERROR-01 | Phase 4 | Pending |
 | ERROR-02 | Phase 4 | Pending |
 | ERROR-03 | Phase 4 | Pending |
@@ -176,4 +176,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-01-30*
-*Last updated: 2026-01-30 after roadmap creation*
+*Last updated: 2026-02-04 after Phase 2 completion*
