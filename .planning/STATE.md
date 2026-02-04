@@ -10,17 +10,17 @@ See: .planning/PROJECT.md (updated 2026-01-30)
 ## Current Position
 
 Phase: 4 of 4 (CLI & Polish)
-Plan: 1 of 3
+Plan: 2 of 3
 Status: In progress
-Last activity: 2026-02-04 — Completed 04-01-PLAN.md (CLI entry point)
+Last activity: 2026-02-04 — Completed 04-02-PLAN.md (Interactive prompt flows)
 
-Progress: [█████████░] 83%
+Progress: [█████████░] 92%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 10
-- Average duration: 24 min
+- Total plans completed: 11
+- Average duration: 21 min
 - Total execution time: 4.1 hours
 
 **By Phase:**
@@ -30,10 +30,10 @@ Progress: [█████████░] 83%
 | 01-foundation | 3 | 232 min | 77 min |
 | 02-safe-file-operations | 3 | 7 min | 2.3 min |
 | 03-core-embedding | 3 | 7 min | 2.3 min |
-| 04-cli-polish | 1 | 2 min | 2 min |
+| 04-cli-polish | 2 | 3 min | 1.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 03-02 (1 min), 03-01 (2 min), 03-03 (4 min), 04-01 (2 min)
+- Last 5 plans: 03-01 (2 min), 03-03 (4 min), 04-01 (2 min), 04-02 (1 min)
 - Trend: Consistent fast pace (1-4 min recent)
 
 *Updated after each plan completion*
@@ -90,6 +90,11 @@ Recent decisions affecting current work:
 - Use node:util parseArgs over commander (lightweight, built-in) — (04-01)
 - Use process.exitCode not process.exit() to avoid truncating stdout — (04-01)
 - ESM pattern for __dirname using import.meta.url — (04-01)
+- Return null on cancellation (not throwing or exiting) — (04-02)
+- Store full ParsedSkill/ParsedCommand objects in option values — (04-02)
+- Sort skills with global first, then project — (04-02)
+- Blue (global) and green (project) color markers for skills — (04-02)
+- Empty array returns [] without showing prompt — (04-02)
 
 ### Pending Todos
 
@@ -101,6 +106,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-04T22:47:43Z
-Stopped at: Completed 04-01-PLAN.md (CLI entry point with argument parsing)
+Last session: 2026-02-04T22:50:33Z
+Stopped at: Completed 04-02-PLAN.md (Interactive prompt flows)
 Resume file: None
