@@ -3,6 +3,7 @@
 import { parseArgs } from 'node:util';
 import { showHelp } from './help.js';
 import { showVersion } from './version.js';
+import { runCompile } from './commands/compile.js';
 
 async function main(): Promise<void> {
   try {
@@ -33,10 +34,10 @@ async function main(): Promise<void> {
 
     // Handle 'compile' command
     if (command === 'compile') {
-      // Placeholder for compile functionality (will be implemented in next plan)
-      console.log('Running compile command...');
-      console.log(`Options: dry-run=${values['dry-run'] ?? false}`);
-      process.exitCode = 0;
+      await runCompile({
+        dryRun: values['dry-run'],
+        cwd: process.cwd()
+      });
       return;
     }
 
