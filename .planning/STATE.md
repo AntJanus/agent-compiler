@@ -12,15 +12,15 @@ See: .planning/PROJECT.md (updated 2026-01-30)
 Phase: 3 of 4 (Core Embedding)
 Plan: 2 of 3 in current phase
 Status: In progress
-Last activity: 2026-02-04 — Completed 03-02-PLAN.md (section and template generation)
+Last activity: 2026-02-04 — Completed 03-01-PLAN.md (section detection and content splitting)
 
-Progress: [██████░░░░] 58%
+Progress: [████████░░] 89%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 7
-- Average duration: 34 min
+- Total plans completed: 8
+- Average duration: 30 min
 - Total execution time: 4.0 hours
 
 **By Phase:**
@@ -29,10 +29,10 @@ Progress: [██████░░░░] 58%
 |-------|-------|-------|----------|
 | 01-foundation | 3 | 232 min | 77 min |
 | 02-safe-file-operations | 3 | 7 min | 2.3 min |
-| 03-core-embedding | 2 | 1 min | 0.5 min |
+| 03-core-embedding | 2 | 3 min | 1.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-02 (2 min), 02-01 (3 min), 02-03 (2 min), 03-02 (1 min)
+- Last 5 plans: 02-01 (3 min), 02-03 (2 min), 03-02 (1 min), 03-01 (2 min)
 - Trend: Maintaining fast pace (1-3 min recent)
 
 *Updated after each plan completion*
@@ -73,6 +73,10 @@ Recent decisions affecting current work:
 - Auto-rollback restores from backup on validation failure — (02-03)
 - Pre-restore backup created before user-initiated restore — (02-03)
 - discoverBackups returns empty array (not error) for missing directory — (02-03)
+- Use regex-based section detection (not AST) for simplicity — (03-01)
+- Case-insensitive section detection matches any casing (## SKILLS, ## Skills, ## skills) — (03-01)
+- Section boundaries respect heading depth (## only, not ###) — (03-01)
+- Generate hash of user content for validation after merge — (03-01)
 - Subsection headings use skill name from YAML frontmatter (not directory name) — (03-02)
 - Empty arrays return empty string (not section heading alone) — (03-02)
 - Template includes explanatory header comment for user clarity — (03-02)
@@ -88,6 +92,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-04T19:50:38Z
-Stopped at: Completed 03-02-PLAN.md (section and template generation)
+Last session: 2026-02-04T19:50:57Z
+Stopped at: Completed 03-01-PLAN.md (section detection and content splitting)
 Resume file: None
