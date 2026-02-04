@@ -14,3 +14,11 @@ export type { BackupResult } from './backup-manager.js';
 // Retention policy
 export { cleanupOldBackups } from './retention-policy.js';
 export type { CleanupResult } from './retention-policy.js';
+
+// Safe write orchestrator
+export { safeWrite } from './safe-writer.js';
+export type { SafeWriteOptions, SafeWriteResult } from '../types/backup.js';
+
+// Restore management
+export { discoverBackups, restoreFromBackup } from './restore-manager.js';
+export type { BackupInfo } from '../types/backup.js';
