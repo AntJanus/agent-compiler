@@ -66,9 +66,9 @@ Plans:
 **Plans**: 3 plans in 2 waves
 
 Plans:
-- [ ] 03-01-PLAN.md — Section boundary detection and content splitting (Wave 1)
-- [ ] 03-02-PLAN.md — Section generation and template creation (Wave 1)
-- [ ] 03-03-PLAN.md — Merge orchestrator with idempotency and validation (Wave 2)
+- [x] 03-01-PLAN.md — Section boundary detection and content splitting (Wave 1)
+- [x] 03-02-PLAN.md — Section generation and template creation (Wave 1)
+- [x] 03-03-PLAN.md — Merge orchestrator with idempotency and validation (Wave 2)
 
 ### Phase 4: CLI & Polish
 **Goal**: Deliver interactive CLI interface with cross-platform reliability
@@ -81,12 +81,13 @@ Plans:
   4. Tool provides color-coded output with progress indicators for long operations
   5. Tool works correctly on macOS and Linux with proper line ending preservation
   6. Tool provides actionable error messages with resolution steps for all failure modes
-**Plans**: TBD
+**Plans**: 4 plans in 3 waves
 
 Plans:
-- [ ] 04-01: TBD
-- [ ] 04-02: TBD
-- [ ] 04-03: TBD
+- [ ] 04-01-PLAN.md — CLI entry point with argument parsing, help, and version (Wave 1)
+- [ ] 04-02-PLAN.md — Interactive selection prompts with visual differentiation (Wave 2)
+- [ ] 04-03-PLAN.md — Output utilities (spinners, errors) and line ending handling (Wave 2)
+- [ ] 04-04-PLAN.md — Compile command orchestrating full interactive flow (Wave 3)
 
 ## Progress
 
@@ -98,7 +99,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | 1. Foundation | 3/3 | ✓ Complete | 2026-02-03 |
 | 2. Safe File Operations | 3/3 | ✓ Complete | 2026-02-04 |
 | 3. Core Embedding | 3/3 | ✓ Complete | 2026-02-04 |
-| 4. CLI & Polish | 0/3 | Not started | - |
+| 4. CLI & Polish | 0/4 | Ready for execution | - |
 
 ---
 *Roadmap created: 2026-01-30*
