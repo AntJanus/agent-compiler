@@ -5,16 +5,16 @@
 See: .planning/PROJECT.md (updated 2026-01-30)
 
 **Core value:** The tool must reliably embed selected skills/commands into CLAUDE.md or AGENTS.md, so that functionality that fails as external skills works consistently when embedded.
-**Current focus:** Phase 3 - Core Embedding
+**Current focus:** Phase 4 - CLI & Polish
 
 ## Current Position
 
-Phase: 3 of 4 (Core Embedding)
-Plan: 3 of 3 in current phase
-Status: Phase complete
-Last activity: 2026-02-04 — Completed 03-03-PLAN.md (merge orchestrator with idempotency and validation)
+Phase: 4 of 4 (CLI & Polish)
+Plan: Ready to start
+Status: Ready for planning
+Last activity: 2026-02-04 — Verified Phase 3 completion (5/5 must-haves)
 
-Progress: [█████████░] 100%
+Progress: [█████████░] 75%
 
 ## Performance Metrics
 

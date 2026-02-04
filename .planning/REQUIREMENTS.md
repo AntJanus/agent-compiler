@@ -123,13 +123,13 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| CLI-01 | Phase 4 | Pending |
-| CLI-02 | Phase 4 | Pending |
-| CLI-03 | Phase 4 | Pending |
-| CLI-04 | Phase 4 | Pending |
-| CLI-05 | Phase 4 | Pending |
-| CLI-06 | Phase 4 | Pending |
-| CLI-07 | Phase 4 | Pending |
+| CLI-01 | Phase 4 | Complete |
+| CLI-02 | Phase 4 | Complete |
+| CLI-03 | Phase 4 | Complete |
+| CLI-04 | Phase 4 | Complete |
+| CLI-05 | Phase 4 | Complete |
+| CLI-06 | Phase 4 | Complete |
+| CLI-07 | Phase 4 | Complete |
 | DISC-01 | Phase 1 | Complete |
 | DISC-02 | Phase 1 | Complete |
 | DISC-03 | Phase 1 | Complete |
@@ -142,12 +142,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PARSE-04 | Phase 1 | Complete |
 | PARSE-05 | Phase 1 | Complete |
 | PARSE-06 | Phase 1 | Complete |
-| EMBED-01 | Phase 3 | Pending |
-| EMBED-02 | Phase 3 | Pending |
-| EMBED-03 | Phase 3 | Pending |
-| EMBED-04 | Phase 3 | Pending |
-| EMBED-05 | Phase 3 | Pending |
-| EMBED-06 | Phase 3 | Pending |
+| EMBED-01 | Phase 3 | Complete |
+| EMBED-02 | Phase 3 | Complete |
+| EMBED-03 | Phase 3 | Complete |
+| EMBED-04 | Phase 3 | Complete |
+| EMBED-05 | Phase 3 | Complete |
+| EMBED-06 | Phase 3 | Complete |
 | SAFETY-01 | Phase 2 | Complete |
 | SAFETY-02 | Phase 2 | Complete |
 | SAFETY-03 | Phase 2 | Complete |
@@ -155,19 +155,19 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SAFETY-05 | Phase 2 | Complete |
 | SAFETY-06 | Phase 2 | Complete |
 | SAFETY-07 | Phase 2 | Complete |
-| ERROR-01 | Phase 4 | Pending |
-| ERROR-02 | Phase 4 | Pending |
-| ERROR-03 | Phase 4 | Pending |
-| ERROR-04 | Phase 4 | Pending |
-| ERROR-05 | Phase 4 | Pending |
-| VALID-01 | Phase 3 | Pending |
-| VALID-02 | Phase 3 | Pending |
-| VALID-03 | Phase 3 | Pending |
-| VALID-04 | Phase 3 | Pending |
-| XPLAT-01 | Phase 4 | Pending |
-| XPLAT-02 | Phase 4 | Pending |
-| XPLAT-03 | Phase 4 | Pending |
-| XPLAT-04 | Phase 4 | Pending |
+| ERROR-01 | Phase 4 | Complete |
+| ERROR-02 | Phase 4 | Complete |
+| ERROR-03 | Phase 4 | Complete |
+| ERROR-04 | Phase 4 | Complete |
+| ERROR-05 | Phase 4 | Complete |
+| VALID-01 | Phase 3 | Complete |
+| VALID-02 | Phase 3 | Complete |
+| VALID-03 | Phase 3 | Complete |
+| VALID-04 | Phase 3 | Complete |
+| XPLAT-01 | Phase 4 | Complete |
+| XPLAT-02 | Phase 4 | Complete |
+| XPLAT-03 | Phase 4 | Complete |
+| XPLAT-04 | Phase 4 | Complete |
 
 **Coverage:**
 - v1 requirements: 44 total

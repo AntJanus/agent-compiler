@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation** - File discovery, parsing, and path utilities
 - [x] **Phase 2: Safe File Operations** - Backups and atomic write operations
-- [ ] **Phase 3: Core Embedding** - Content merging and section management
+- [x] **Phase 3: Core Embedding** - Content merging and section management
 - [ ] **Phase 4: CLI & Polish** - Interactive interface and cross-platform support
 
 ## Phase Details
@@ -97,7 +97,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | ✓ Complete | 2026-02-03 |
 | 2. Safe File Operations | 3/3 | ✓ Complete | 2026-02-04 |
-| 3. Core Embedding | 0/3 | Ready for execution | - |
+| 3. Core Embedding | 3/3 | ✓ Complete | 2026-02-04 |
 | 4. CLI & Polish | 0/3 | Not started | - |
 
 ---
