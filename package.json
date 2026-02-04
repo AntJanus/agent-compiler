@@ -5,7 +5,7 @@
   "type": "module",
   "main": "dist/index.js",
   "bin": {
-    "agent-compiler": "dist/cli.js"
+    "agent-compiler": "dist/cli/cli.js"
   },
   "scripts": {
     "build": "tsc",
@@ -26,8 +26,11 @@
     "typescript": "^5.6.0"
   },
   "dependencies": {
+    "@clack/prompts": "^0.7.0",
     "fast-glob": "^3.3.2",
     "gray-matter": "^4.0.3",
-    "js-yaml": "^4.1.0"
+    "js-yaml": "^4.1.0",
+    "ora": "^8.0.1",
+    "picocolors": "^1.0.0"
   }
 }
