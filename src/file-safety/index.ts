@@ -22,3 +22,11 @@ export type { SafeWriteOptions, SafeWriteResult } from '../types/backup.js';
 // Restore management
 export { discoverBackups, restoreFromBackup } from './restore-manager.js';
 export type { BackupInfo } from '../types/backup.js';
+
+// Line ending utilities
+export { detectLineEnding, normalizeLineEnding, detectFromContent } from './line-endings.js';
+export type { LineEnding } from './line-endings.js';
+
+// Permission checking
+export { checkWritePermission, checkReadPermission } from './permissions.js';
+export type { PermissionCheckResult } from './permissions.js';
