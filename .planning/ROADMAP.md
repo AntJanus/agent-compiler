@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Foundation** - File discovery, parsing, and path utilities
 - [x] **Phase 2: Safe File Operations** - Backups and atomic write operations
 - [x] **Phase 3: Core Embedding** - Content merging and section management
-- [ ] **Phase 4: CLI & Polish** - Interactive interface and cross-platform support
+- [x] **Phase 4: CLI & Polish** - Interactive interface and cross-platform support
 
 ## Phase Details
 
@@ -88,7 +88,7 @@ Plans:
 - [x] 04-02-PLAN.md — Interactive selection prompts with visual differentiation (Wave 2)
 - [x] 04-03-PLAN.md — Output utilities (spinners, errors) and line ending handling (Wave 2)
 - [x] 04-04-PLAN.md — Compile command orchestrating full interactive flow (Wave 3)
-- [ ] 04-05-PLAN.md — Gap closure: Integrate line ending and permission utilities (Wave 1) [GAP FIX]
+- [x] 04-05-PLAN.md — Gap closure: Integrate line ending and permission utilities (Wave 1) [GAP FIX]
 
 ## Progress
 
@@ -100,7 +100,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | 1. Foundation | 3/3 | ✓ Complete | 2026-02-03 |
 | 2. Safe File Operations | 3/3 | ✓ Complete | 2026-02-04 |
 | 3. Core Embedding | 3/3 | ✓ Complete | 2026-02-04 |
-| 4. CLI & Polish | 4/5 | Gap closure needed | - |
+| 4. CLI & Polish | 5/5 | ✓ Complete | 2026-02-05 |
 
 ---
 *Roadmap created: 2026-01-30*
