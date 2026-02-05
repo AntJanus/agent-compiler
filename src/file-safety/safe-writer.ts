@@ -3,6 +3,7 @@ import { createBackup } from './backup-manager.js';
 import { atomicWrite } from './atomic-writer.js';
 import { validateMarkdownStructure } from './markdown-validator.js';
 import { checkWritePermission } from './permissions.js';
+import { detectLineEnding, normalizeLineEnding } from './line-endings.js';
 import { ActionableError, createPermissionError } from '../cli/output/messages.js';
 import type { SafeWriteOptions, SafeWriteResult } from '../types/backup.js';
 
@@ -13,15 +14,19 @@ import type { SafeWriteOptions, SafeWriteResult } from '../types/backup.js';
  * by backup, validated after completion, and automatically rolled back if validation fails.
  *
  * Flow:
+ * 0. Check write permissions (target file and backup directory)
+ * 0.5. Detect original file line ending (LF/CRLF) for preservation
  * 1. Create backup of current file (SAFETY-04: halt if backup fails)
- * 2. Perform atomic write to target file
- * 3. Validate written content (if options.validate is true, default)
- * 4. Auto-rollback from backup if validation fails
+ * 2. Normalize content to match original line ending
+ * 3. Perform atomic write to target file
+ * 4. Validate written content (if options.validate is true, default)
+ * 5. Auto-rollback from backup if validation fails
  *
  * @param targetPath - Absolute path to file to write
  * @param content - Content to write
  * @param options - SafeWriteOptions with backupDir and optional validate flag
  * @returns SafeWriteResult with success status, paths, and rollback indicator
+ * @throws ActionableError if permission denied (with resolution steps)
  * @throws Error if backup creation fails (operation halts before any modification)
  * @throws Error if write fails (backup exists for manual recovery)
  * @throws Error if rollback fails after validation failure (critical error)
@@ -60,6 +65,10 @@ export async function safeWrite(
     );
   }
 
+  // Step 0.5: Detect original line ending to preserve it
+  const originalLineEnding = await detectLineEnding(targetPath);
+  // detectLineEnding returns 'LF' for new files (ENOENT), which is correct default
+
   // Step 1: Create backup before any modification
   // If this fails, we halt immediately (SAFETY-04)
   let backupPath: string;
@@ -70,10 +79,13 @@ export async function safeWrite(
     throw new Error(`Cannot proceed without backup: ${error.message}`);
   }
 
-  // Step 2: Perform atomic write
+  // Step 2: Normalize content to match original line ending
+  const normalizedContent = normalizeLineEnding(content, originalLineEnding);
+
+  // Step 3: Perform atomic write
   // If this fails, backup exists for manual recovery
   try {
-    await atomicWrite(targetPath, content);
+    await atomicWrite(targetPath, normalizedContent);
   } catch (error: any) {
     throw new Error(
       `Write failed. Backup available at: ${backupPath}\n` +
@@ -81,7 +93,7 @@ export async function safeWrite(
     );
   }
 
-  // Step 3: Validate written content (if enabled)
+  // Step 4: Validate written content (if enabled)
   if (shouldValidate) {
     try {
       // Read the written file
@@ -91,7 +103,7 @@ export async function safeWrite(
       const validationResult = validateMarkdownStructure(writtenContent);
 
       if (!validationResult.valid) {
-        // Step 4: Auto-rollback on validation failure
+        // Step 5: Auto-rollback on validation failure
         console.error(
           `Validation failed, restoring from backup: ${validationResult.errors.join(', ')}`
         );
