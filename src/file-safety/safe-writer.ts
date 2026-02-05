@@ -2,6 +2,8 @@ import { readFile } from 'fs/promises';
 import { createBackup } from './backup-manager.js';
 import { atomicWrite } from './atomic-writer.js';
 import { validateMarkdownStructure } from './markdown-validator.js';
+import { checkWritePermission } from './permissions.js';
+import { ActionableError, createPermissionError } from '../cli/output/messages.js';
 import type { SafeWriteOptions, SafeWriteResult } from '../types/backup.js';
 
 /**
@@ -31,6 +33,32 @@ export async function safeWrite(
 ): Promise<SafeWriteResult> {
   // Default validate to true if not specified
   const shouldValidate = options.validate !== false;
+
+  // Step 0: Check write permissions before any operations
+  const permCheck = await checkWritePermission(targetPath);
+  if (!permCheck.canWrite) {
+    const error = createPermissionError(targetPath);
+    // Add the specific reason from permission check to context
+    error.context.details = permCheck.reason || 'Unknown permission issue';
+    throw error;
+  }
+
+  // Check backup directory permissions too
+  const backupDirCheck = await checkWritePermission(options.backupDir + '/test');
+  if (!backupDirCheck.canWrite) {
+    throw new ActionableError(
+      'Cannot create backups',
+      {
+        directory: options.backupDir,
+        reason: backupDirCheck.reason || 'No write permission'
+      },
+      [
+        'Check backup directory permissions',
+        'Ensure directory exists and is writable',
+        `Try: mkdir -p "${options.backupDir}"`
+      ]
+    );
+  }
 
   // Step 1: Create backup before any modification
   // If this fails, we halt immediately (SAFETY-04)
