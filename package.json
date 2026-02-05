@@ -4,25 +4,53 @@
   "description": "CLI tool to discover and compile Claude skills and commands",
   "type": "module",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "bin": {
     "agent-compiler": "dist/cli/cli.js"
   },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsc",
-    "dev": "tsc --watch"
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build",
+    "prepare": "husky"
   },
   "keywords": [
     "claude",
     "ai",
     "skills",
     "commands",
-    "cli"
+    "cli",
+    "agents",
+    "automation"
   ],
-  "author": "",
+  "author": "Antonin Januska",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antjanus/agent-compiler.git"
+  },
+  "bugs": {
+    "url": "https://github.com/antjanus/agent-compiler/issues"
+  },
+  "homepage": "https://github.com/antjanus/agent-compiler#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "devDependencies": {
+    "@commitlint/cli": "^19.0.0",
+    "@commitlint/config-conventional": "^19.0.0",
+    "@semantic-release/changelog": "^6.0.0",
+    "@semantic-release/git": "^10.0.0",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^22.0.0",
+    "husky": "^9.0.0",
+    "semantic-release": "^24.0.0",
     "typescript": "^5.6.0"
   },
   "dependencies": {

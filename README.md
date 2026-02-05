@@ -74,3 +74,67 @@ Future features:
 - [ ] non-markdown based skills (with scripts)
 - [ ] embedding CRUD -- allowing adding, removing, updating embeds
 - [ ] skill/command/agent compression
+
+## Development
+
+### Setup
+
+```sh
+git clone https://github.com/antjanus/agent-compiler.git
+cd agent-compiler
+npm install
+npm run build
+```
+
+### Commands
+
+```sh
+npm run build    # Build TypeScript
+npm run dev      # Watch mode
+npm run clean    # Remove dist/
+```
+
+### Commit Convention
+
+This project uses [Conventional Commits](https://www.conventionalcommits.org/). Commits must follow the format:
+
+```
+type(scope): description
+
+[optional body]
+
+[optional footer]
+```
+
+**Types:**
+- `feat:` - New feature (triggers minor version bump)
+- `fix:` - Bug fix (triggers patch version bump)
+- `docs:` - Documentation only
+- `style:` - Formatting, no code change
+- `refactor:` - Code change that neither fixes nor adds
+- `perf:` - Performance improvement
+- `test:` - Adding/updating tests
+- `build:` - Build system or dependencies
+- `ci:` - CI configuration
+- `chore:` - Maintenance tasks
+
+**Breaking Changes:** Add `BREAKING CHANGE:` in the commit body to trigger a major version bump.
+
+### Releases
+
+Releases are automated via semantic-release when commits are pushed to `main`:
+1. Version is determined from commit messages
+2. CHANGELOG.md is updated
+3. Package is published to npm
+4. GitHub release is created
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feat/my-feature`
+3. Make changes and commit using conventional commits
+4. Push and open a pull request against `main`
+
+## License
+
+MIT
