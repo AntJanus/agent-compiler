@@ -81,13 +81,14 @@ Plans:
   4. Tool provides color-coded output with progress indicators for long operations
   5. Tool works correctly on macOS and Linux with proper line ending preservation
   6. Tool provides actionable error messages with resolution steps for all failure modes
-**Plans**: 4 plans in 3 waves
+**Plans**: 5 plans in 3 waves
 
 Plans:
-- [ ] 04-01-PLAN.md — CLI entry point with argument parsing, help, and version (Wave 1)
-- [ ] 04-02-PLAN.md — Interactive selection prompts with visual differentiation (Wave 2)
-- [ ] 04-03-PLAN.md — Output utilities (spinners, errors) and line ending handling (Wave 2)
-- [ ] 04-04-PLAN.md — Compile command orchestrating full interactive flow (Wave 3)
+- [x] 04-01-PLAN.md — CLI entry point with argument parsing, help, and version (Wave 1)
+- [x] 04-02-PLAN.md — Interactive selection prompts with visual differentiation (Wave 2)
+- [x] 04-03-PLAN.md — Output utilities (spinners, errors) and line ending handling (Wave 2)
+- [x] 04-04-PLAN.md — Compile command orchestrating full interactive flow (Wave 3)
+- [ ] 04-05-PLAN.md — Gap closure: Integrate line ending and permission utilities (Wave 1) [GAP FIX]
 
 ## Progress
 
@@ -99,8 +100,8 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | 1. Foundation | 3/3 | ✓ Complete | 2026-02-03 |
 | 2. Safe File Operations | 3/3 | ✓ Complete | 2026-02-04 |
 | 3. Core Embedding | 3/3 | ✓ Complete | 2026-02-04 |
-| 4. CLI & Polish | 0/4 | Ready for execution | - |
+| 4. CLI & Polish | 4/5 | Gap closure needed | - |
 
 ---
 *Roadmap created: 2026-01-30*
-*Last updated: 2026-02-04*
+*Last updated: 2026-02-05*
