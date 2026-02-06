@@ -25,3 +25,6 @@ coverage/
 
 # Backup files
 .agent-compiler-backups/
+
+# Planning/internal docs
+.planning/
