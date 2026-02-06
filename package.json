@@ -1,6 +1,6 @@
 {
   "name": "agent-compiler",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "CLI tool to discover and compile Claude skills and commands",
   "type": "module",
   "main": "dist/index.js",
