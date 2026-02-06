@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="logo.png" alt="Agent Compiler Logo" width="200"/>
+  <img src="logo.png" alt="Agent Compiler Logo"/>
 </div>
 
 # Agent Compiler
