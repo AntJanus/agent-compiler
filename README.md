@@ -1,139 +1,119 @@
+<div align="center">
+  <img src="logo.png" alt="Agent Compiler Logo" width="200"/>
+</div>
+
 # Agent Compiler
 
-What it does:
+**Embed Claude Code skills and commands directly into CLAUDE.md/AGENTS.md for reliable agent behavior.**
 
-- takes all of your skills, agents, and commands
-- lets you pick which ones you want to use for a project
-- combines CLAUDE.md or AGENTS.md with the skills, agents, and commands picked
-- compiles the final result
-
-Essentially, the Agent Compiler embeds skills, agents, and commands in the CLAUDE.md or AGENTS.md directly in order to prioritize those tasks rather than relying on self-invokation.
+Agent Compiler solves unreliable skill invocation by compiling your skills, agents, and commands directly into your configuration files where Claude Code consistently reads them.
 
 ## Why?
 
-According Vercel, [docs embedded in AGENTS.md outpeform skills](https://vercel.com/blog/agents-md-outperforms-skills-in-our-agent-evals). I've found this to be a case for me as well:
+According to Vercel, [docs embedded in AGENTS.md outperform skills](https://vercel.com/blog/agents-md-outperforms-skills-in-our-agent-evals). Common issues with skills:
 
-- skills don't get triggered even using trigger phrases
-- skills don't behave how I'd expect them to
-- agents/claude.md still wins over any "implied" functionality
+- Skills don't trigger even with correct phrases
+- Inconsistent behavior across sessions
+- CLAUDE.md/AGENTS.md instructions take priority over implied functionality
+
+**Solution:** Embed skills directly where they work reliably.
 
 ## Installation
+
+### One-time use with npx (recommended)
 
 ```sh
 npx agent-compiler compile
 ```
 
-Then, go through the step-by-step process to pick the skills, agents, and commands you want to embed and once you approve the setup, the AGENTS.md or CLAUDE.md will be generated
+### Global installation
 
-## How?
+```sh
+npm install -g agent-compiler
+agent-compiler compile
+```
 
-For now, agent-compiler supports only markdown files. Here's what it does:
+## Usage
 
-- the agent reads all of your globally-available skills and local skills (as well as agents and commands)
-- the agent asks what you'd want to embed -- it's impractical to embed everything
-- the agent then creates a section in the AGENTS.md or CLAUDE.md where it embeds the skills directly
+Run the compiler in your project directory:
 
-Because it creates a new section, the agent-compiler is able to update/add/remove skills dynamically as well.
+```sh
+npx agent-compiler compile
+```
 
-Typical structure:
+The interactive wizard will:
+1. Discover global (`~/.claude/skills/`) and local (`./.claude/skills/`) skills
+2. Let you select which skills/commands to embed
+3. Generate or update your CLAUDE.md or AGENTS.md with embedded content
+4. Create automatic backups before any modifications
+
+## How It Works
+
+1. **Discovery**: Scans `~/.claude/skills/` (global) and `./.claude/skills/` (project) for skills/commands
+2. **Selection**: Interactive multi-select for choosing what to embed
+3. **Embedding**: Creates dedicated sections in CLAUDE.md/AGENTS.md
+4. **Safety**: Automatic backups before modification with rollback on failure
+
+### Output Structure
 
 ```md
 # CLAUDE.md
 
-Your usual CLAUDE.md
+Your existing CLAUDE.md content...
 
 ## SKILLS
 
-### Skill name
-
-embedded compressed content of the skill as well as invokation logic.
-
-## AGENTS
-
-### Agent name
+### Skill Name
+[Embedded skill content and invocation logic]
 
 ## COMMANDS
 
-### Command name
-
+### Command Name
+[Embedded command content]
 ```
 
-## Roadmap
+The sectioned structure allows dynamic updates—you can re-run the compiler to add, remove, or update embedded content.
 
-Currently supported:
+## Features
 
-- [x] local and global markdown-based skills
-- [x] local and global commands
-- [x] local and global agents
-- [x] embedding/compiling nested skills (skills that refer to multiple files)
-- [x] step-by-step compiler wizard/TUI
+**Current:**
+- ✅ Markdown-based skills, commands, and agents (global + local)
+- ✅ Nested skill compilation (multi-file skills)
+- ✅ Interactive TUI with multi-select
+- ✅ Automatic backups and safe writes
+- ✅ Dynamic section updates (re-run to modify embeds)
 
-
-Future features:
-
-- [ ] non-markdown based skills (with scripts)
-- [ ] embedding CRUD -- allowing adding, removing, updating embeds
-- [ ] skill/command/agent compression
+**Planned:**
+- 🔲 Script-based skills (non-markdown)
+- 🔲 Content compression for embedded skills
+- 🔲 Selective embed management (add/remove individual items)
 
 ## Development
-
-### Setup
 
 ```sh
 git clone https://github.com/antjanus/agent-compiler.git
 cd agent-compiler
 npm install
-npm run build
-```
-
-### Commands
-
-```sh
 npm run build    # Build TypeScript
-npm run dev      # Watch mode
-npm run clean    # Remove dist/
+npm run dev      # Watch mode for development
 ```
 
-### Commit Convention
+### Contributing
 
-This project uses [Conventional Commits](https://www.conventionalcommits.org/). Commits must follow the format:
+This project uses [Conventional Commits](https://www.conventionalcommits.org/) for automated releases via semantic-release.
 
+**Commit format:**
 ```
 type(scope): description
-
-[optional body]
-
-[optional footer]
 ```
 
-**Types:**
-- `feat:` - New feature (triggers minor version bump)
-- `fix:` - Bug fix (triggers patch version bump)
-- `docs:` - Documentation only
-- `style:` - Formatting, no code change
-- `refactor:` - Code change that neither fixes nor adds
-- `perf:` - Performance improvement
-- `test:` - Adding/updating tests
-- `build:` - Build system or dependencies
-- `ci:` - CI configuration
-- `chore:` - Maintenance tasks
+**Common types:** `feat:`, `fix:`, `docs:`, `refactor:`, `test:`, `chore:`
 
-**Breaking Changes:** Add `BREAKING CHANGE:` in the commit body to trigger a major version bump.
+1. Fork and create a feature branch (`feat/my-feature`)
+2. Make changes using conventional commits
+3. Open a PR against `main`
 
-### Releases
-
-Releases are automated via semantic-release when commits are pushed to `main`:
-1. Version is determined from commit messages
-2. CHANGELOG.md is updated
-3. Package is published to npm
-4. GitHub release is created
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feat/my-feature`
-3. Make changes and commit using conventional commits
-4. Push and open a pull request against `main`
+Releases are automated on merge to `main`—version bumping, CHANGELOG updates, and npm publishing happen automatically.
 
 ## License
 
