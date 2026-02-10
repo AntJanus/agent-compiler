@@ -1,6 +1,9 @@
 // Section extraction
 export { splitContent, detectSectionBoundary, extractUserContent } from './section-extractor.js';
 
+// Section parsing
+export { parseEmbeddedItems } from './section-parser.js';
+
 // Section generation
 export { generateSkillsSection, generateCommandsSection } from './section-generator.js';
 
