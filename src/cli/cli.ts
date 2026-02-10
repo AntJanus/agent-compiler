@@ -4,6 +4,7 @@ import { parseArgs } from 'node:util';
 import { showHelp } from './help.js';
 import { showVersion } from './version.js';
 import { runCompile } from './commands/compile.js';
+import { runUnembed } from './commands/unembed.js';
 
 async function main(): Promise<void> {
   try {
@@ -12,6 +13,7 @@ async function main(): Promise<void> {
         version: { type: 'boolean', short: 'v' },
         help: { type: 'boolean', short: 'h' },
         'dry-run': { type: 'boolean' },
+        force: { type: 'boolean', short: 'f' },
       },
       allowPositionals: true,
     });
@@ -36,6 +38,16 @@ async function main(): Promise<void> {
     if (command === 'compile') {
       await runCompile({
         dryRun: values['dry-run'],
+        cwd: process.cwd()
+      });
+      return;
+    }
+
+    // Handle 'unembed' command
+    if (command === 'unembed') {
+      await runUnembed({
+        dryRun: values['dry-run'],
+        force: values.force,
         cwd: process.cwd()
       });
       return;
