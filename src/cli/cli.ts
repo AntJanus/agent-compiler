@@ -6,6 +6,7 @@ import { showVersion } from './version.js';
 import { runCompile } from './commands/compile.js';
 import { runUnembed } from './commands/unembed.js';
 import { runValidate } from './commands/validate.js';
+import { runExport } from './commands/export.js';
 
 async function main(): Promise<void> {
   try {
@@ -16,6 +17,7 @@ async function main(): Promise<void> {
         'dry-run': { type: 'boolean' },
         force: { type: 'boolean', short: 'f' },
         json: { type: 'boolean' },
+        output: { type: 'string', short: 'o' },
       },
       allowPositionals: true,
     });
@@ -59,6 +61,17 @@ async function main(): Promise<void> {
     if (command === 'validate') {
       await runValidate({
         json: values.json,
+        cwd: process.cwd()
+      });
+      return;
+    }
+
+    // Handle 'export' command
+    if (command === 'export') {
+      await runExport({
+        output: values.output as string | undefined,
+        dryRun: values['dry-run'],
+        force: values.force,
         cwd: process.cwd()
       });
       return;
