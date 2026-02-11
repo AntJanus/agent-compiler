@@ -8,10 +8,10 @@ import { generateSkillsSection, generateCommandsSection } from './section-genera
  *
  * Reuses existing section generators to ensure consistent formatting.
  */
-export function generateExportContent(
+export async function generateExportContent(
   skills: ParsedSkill[],
   commands: ParsedCommand[]
-): string {
+): Promise<string> {
   const parts: string[] = [];
 
   // Header comments
@@ -20,7 +20,7 @@ export function generateExportContent(
   parts.push('');
 
   // Generate skills section if any skills provided
-  const skillsSection = generateSkillsSection(skills);
+  const skillsSection = await generateSkillsSection(skills);
   if (skillsSection) {
     parts.push(skillsSection);
   }
@@ -31,7 +31,7 @@ export function generateExportContent(
   }
 
   // Generate commands section if any commands provided
-  const commandsSection = generateCommandsSection(commands);
+  const commandsSection = await generateCommandsSection(commands);
   if (commandsSection) {
     parts.push(commandsSection);
   }

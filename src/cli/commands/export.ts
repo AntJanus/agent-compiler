@@ -213,7 +213,7 @@ export async function runExport(options: ExportOptions = {}): Promise<void> {
     }
 
     // Step 11: Generate content
-    const content = generateExportContent(selectedSkills, selectedCommands);
+    const content = await generateExportContent(selectedSkills, selectedCommands);
 
     // Step 12: Write with safeWrite
     const result = await withSpinner('Exporting to file...', async () => {
