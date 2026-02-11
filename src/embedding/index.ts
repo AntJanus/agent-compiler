@@ -7,6 +7,9 @@ export { parseEmbeddedItems } from './section-parser.js';
 // Section generation
 export { generateSkillsSection, generateCommandsSection } from './section-generator.js';
 
+// Heading transformation
+export { transformHeadings } from './heading-transformer.js';
+
 // Template generation
 export { generateTemplate, TEMPLATE_HEADER_COMMENT } from './template-generator.js';
 
