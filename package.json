@@ -48,6 +48,7 @@
     "@semantic-release/changelog": "^6.0.0",
     "@semantic-release/git": "^10.0.0",
     "@types/js-yaml": "^4.0.9",
+    "@types/mdast": "^4.0.4",
     "@types/node": "^22.0.0",
     "husky": "^9.0.0",
     "semantic-release": "^24.0.0",
@@ -59,6 +60,10 @@
     "gray-matter": "^4.0.3",
     "js-yaml": "^4.1.0",
     "ora": "^8.0.1",
-    "picocolors": "^1.0.0"
+    "picocolors": "^1.0.0",
+    "remark-parse": "^11.0.0",
+    "remark-stringify": "^11.0.0",
+    "unified": "^11.0.5",
+    "unist-util-visit": "^5.1.0"
   }
 }
