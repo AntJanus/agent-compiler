@@ -8,16 +8,20 @@ ${pc.bold('USAGE')}
   ${pc.cyan('npx agent-compiler compile')}          Run interactive wizard
   ${pc.cyan('npx agent-compiler compile --dry-run')} Preview changes without writing
   ${pc.cyan('npx agent-compiler unembed')}           Remove embedded skills and commands
+  ${pc.cyan('npx agent-compiler validate')}          Validate skills and commands
+  ${pc.cyan('npx agent-compiler validate --json')}   Output validation as JSON
   ${pc.cyan('npx agent-compiler --version')}         Show version number
   ${pc.cyan('npx agent-compiler --help')}            Show this help message
 
 ${pc.bold('COMMANDS')}
   ${pc.cyan('compile')}         Embed skills and commands into target file
   ${pc.cyan('unembed')}         Remove embedded skills and commands from target file
+  ${pc.cyan('validate')}        Validate all skills and commands before compile
 
 ${pc.bold('OPTIONS')}
   ${pc.cyan('--dry-run')}       Preview changes without writing files
   ${pc.cyan('--force, -f')}     Skip confirmation prompt
+  ${pc.cyan('--json')}          Output results as JSON (validate command)
   ${pc.cyan('-h, --help')}      Show help message
   ${pc.cyan('-v, --version')}   Show version number
 
@@ -36,6 +40,12 @@ ${pc.bold('EXAMPLES')}
 
   ${pc.dim('# Remove without confirmation')}
   ${pc.cyan('$ npx agent-compiler unembed --force')}
+
+  ${pc.dim('# Validate all skills and commands')}
+  ${pc.cyan('$ npx agent-compiler validate')}
+
+  ${pc.dim('# Validate and output as JSON for CI/CD')}
+  ${pc.cyan('$ npx agent-compiler validate --json')}
 
   ${pc.dim('# Check the current version')}
   ${pc.cyan('$ npx agent-compiler --version')}
