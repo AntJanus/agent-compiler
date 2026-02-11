@@ -10,6 +10,9 @@ export { generateSkillsSection, generateCommandsSection } from './section-genera
 // Template generation
 export { generateTemplate, TEMPLATE_HEADER_COMMENT } from './template-generator.js';
 
+// Export content generation
+export { generateExportContent } from './export-generator.js';
+
 // Main merge API
 export { mergeEmbeddedContent } from './content-merger.js';
 
