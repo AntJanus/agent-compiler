@@ -5,6 +5,7 @@ import { showHelp } from './help.js';
 import { showVersion } from './version.js';
 import { runCompile } from './commands/compile.js';
 import { runUnembed } from './commands/unembed.js';
+import { runValidate } from './commands/validate.js';
 
 async function main(): Promise<void> {
   try {
@@ -14,6 +15,7 @@ async function main(): Promise<void> {
         help: { type: 'boolean', short: 'h' },
         'dry-run': { type: 'boolean' },
         force: { type: 'boolean', short: 'f' },
+        json: { type: 'boolean' },
       },
       allowPositionals: true,
     });
@@ -48,6 +50,15 @@ async function main(): Promise<void> {
       await runUnembed({
         dryRun: values['dry-run'],
         force: values.force,
+        cwd: process.cwd()
+      });
+      return;
+    }
+
+    // Handle 'validate' command
+    if (command === 'validate') {
+      await runValidate({
+        json: values.json,
         cwd: process.cwd()
       });
       return;
