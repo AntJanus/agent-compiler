@@ -95,8 +95,8 @@ export async function mergeEmbeddedContent(options: MergeOptions): Promise<Merge
   const userContentHash = split.userContentHash;
 
   // Step 3: Generate new embedded sections
-  const skillsSection = generateSkillsSection(skills);
-  const commandsSection = generateCommandsSection(commands);
+  const skillsSection = await generateSkillsSection(skills);
+  const commandsSection = await generateCommandsSection(commands);
 
   // Step 4: Assemble merged content
   const parts: string[] = [];

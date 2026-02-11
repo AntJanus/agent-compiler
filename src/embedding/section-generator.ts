@@ -1,10 +1,11 @@
 import type { ParsedSkill, ParsedCommand } from '../types/index.js';
+import { transformHeadings } from './heading-transformer.js';
 
 /**
  * Generate the ## SKILLS section from parsed skills.
  * Returns empty string if skills array is empty.
  */
-export function generateSkillsSection(skills: ParsedSkill[]): string {
+export async function generateSkillsSection(skills: ParsedSkill[]): Promise<string> {
   if (skills.length === 0) {
     return '';
   }
@@ -13,7 +14,8 @@ export function generateSkillsSection(skills: ParsedSkill[]): string {
 
   for (const skill of skills) {
     section += `### ${skill.metadata.name}\n\n`;
-    section += `${skill.content.trim()}\n\n`;
+    const transformedContent = await transformHeadings(skill.content);
+    section += `${transformedContent.trim()}\n\n`;
   }
 
   return section.trimEnd();
@@ -23,7 +25,7 @@ export function generateSkillsSection(skills: ParsedSkill[]): string {
  * Generate the ## COMMANDS section from parsed commands.
  * Returns empty string if commands array is empty.
  */
-export function generateCommandsSection(commands: ParsedCommand[]): string {
+export async function generateCommandsSection(commands: ParsedCommand[]): Promise<string> {
   if (commands.length === 0) {
     return '';
   }
@@ -32,7 +34,8 @@ export function generateCommandsSection(commands: ParsedCommand[]): string {
 
   for (const command of commands) {
     section += `### ${command.name}\n\n`;
-    section += `${command.content.trim()}\n\n`;
+    const transformedContent = await transformHeadings(command.content);
+    section += `${transformedContent.trim()}\n\n`;
   }
 
   return section.trimEnd();
