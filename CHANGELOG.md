@@ -1,3 +1,61 @@
+# 1.0.0 (2026-02-16)
+
+
+### Bug Fixes
+
+* disable body-max-line-length for semantic-release ([4437351](https://github.com/antjanus/agent-compiler/commit/443735155d0adb1450a83d27eea4eecd61e82daf))
+
+
+### Features
+
+* **01-01:** create type definitions for skills, commands, and discovery ([1c0648f](https://github.com/antjanus/agent-compiler/commit/1c0648fc8f1320332808fe3c7bf08fb575854d92))
+* **01-01:** implement path resolution utilities with tilde expansion ([96d3f26](https://github.com/antjanus/agent-compiler/commit/96d3f2620f14b313904e0e50e34d52f6c2b13c6d))
+* **01-02:** create discovery module index with combined discovery ([f658938](https://github.com/antjanus/agent-compiler/commit/f658938b64cc427f6382c0bc0e45acabfb0a4671))
+* **01-02:** implement command discovery ([78c502a](https://github.com/antjanus/agent-compiler/commit/78c502a71b8dfc277c1185519f9b73426b461834))
+* **01-02:** implement skill discovery from global and project locations ([3b2d1c5](https://github.com/antjanus/agent-compiler/commit/3b2d1c504389a82c5ba75bcabf6ef40a349f4f18))
+* **01-03:** implement command parser and parser module index ([fdad6d4](https://github.com/antjanus/agent-compiler/commit/fdad6d489990558c79198802bb4bacc58685fc68))
+* **01-03:** implement markdown reference extraction and concatenation ([a0560d8](https://github.com/antjanus/agent-compiler/commit/a0560d891405cdd4ddd3b1e8ce8c64394ce59b52))
+* **01-03:** implement SKILL.md parser with safe YAML frontmatter ([29de63b](https://github.com/antjanus/agent-compiler/commit/29de63b1e1927300d52ce7d105366883448b7c69))
+* **01-unembed-command-03:** create unembed command implementation ([349015a](https://github.com/antjanus/agent-compiler/commit/349015a794cf672fb2e1b5cd3877f93e058c0e39))
+* **01-unembed-command-03:** integrate unembed command into cli ([164ef7f](https://github.com/antjanus/agent-compiler/commit/164ef7f8debfb4c148e850f05248ebfc6fbe84f3))
+* **01-unembed-command:** add embedded item type definition ([6e96f39](https://github.com/antjanus/agent-compiler/commit/6e96f39978dc1ce3801f268a0f55334d8176b6a4))
+* **01-unembed-command:** add interactive selection ui for item removal ([547c7a1](https://github.com/antjanus/agent-compiler/commit/547c7a11ce3e767b4a0f7f55f5b96c778f490e34))
+* **01-unembed-command:** add section parser for embedded items ([48cba16](https://github.com/antjanus/agent-compiler/commit/48cba16c922964aeef643d0cf56b5d91c412f9b7))
+* **02-01:** add json formatter for ci/cd output ([564a973](https://github.com/antjanus/agent-compiler/commit/564a9733afc6f0be3ce479d7c21a9b65b65f0191))
+* **02-01:** create backup manager with creation and verification ([9edf455](https://github.com/antjanus/agent-compiler/commit/9edf455889465e3fc4fa2a1b31708a83e9774e77))
+* **02-01:** create hash generator and backup filename utilities ([5a2ad34](https://github.com/antjanus/agent-compiler/commit/5a2ad34f75e4e14a19824393055027667df57f50))
+* **02-01:** create retention policy and module index ([1a7e386](https://github.com/antjanus/agent-compiler/commit/1a7e386c7d39c5403155a1e3ed01ff576cb3c409))
+* **02-01:** create validation types and skill/command validators ([7ee1ede](https://github.com/antjanus/agent-compiler/commit/7ee1ede389e8a327e5c0c2303a2960944e26e3d5))
+* **02-02:** add markdown structure validator and module index ([5b9db35](https://github.com/antjanus/agent-compiler/commit/5b9db35dc30326371c2be5127f3b9e3981c6be0f))
+* **02-02:** add validate command with human-readable and json output ([348483b](https://github.com/antjanus/agent-compiler/commit/348483b61f2d66a0c88b61d987c9f2fb35743821))
+* **02-02:** implement atomic write with temp-then-rename pattern ([33c7013](https://github.com/antjanus/agent-compiler/commit/33c701331bfb35b119721d1710095b0e050999e8))
+* **02-02:** integrate validate command into cli router and help ([bf79d68](https://github.com/antjanus/agent-compiler/commit/bf79d6839624b0efc43a08fcc9922f4282f5d0fe))
+* **02-03:** create restore manager with backup discovery and restoration ([4ad36b4](https://github.com/antjanus/agent-compiler/commit/4ad36b42bbc3a6470bb266a8c5efd0abc860db34))
+* **02-03:** create safe writer with backup, validation, and auto-rollback ([c7f913e](https://github.com/antjanus/agent-compiler/commit/c7f913ee6da055ccf31382c59b22a96f93d255be))
+* **03-01:** create embedding types for section detection ([031e296](https://github.com/antjanus/agent-compiler/commit/031e2965399efd6ee6c096471fc0c482293ebab5))
+* **03-01:** implement section boundary detection and content splitting ([6cfa6d1](https://github.com/antjanus/agent-compiler/commit/6cfa6d176d51076a6611bd788ddabdc3013846a6))
+* **03-02:** create export command with full workflow ([1d06e32](https://github.com/antjanus/agent-compiler/commit/1d06e3248cb26e4599148dc3b9b678446157f391))
+* **03-02:** implement section generators for skills and commands ([9866ab4](https://github.com/antjanus/agent-compiler/commit/9866ab4323f9355693959e88f2d80cb57fafc6ad))
+* **03-02:** implement template generator for new CLAUDE.md files ([585eb49](https://github.com/antjanus/agent-compiler/commit/585eb491964dcbaad3c72e9108118a50a1399eaf))
+* **03-02:** wire export command into cli and help ([18de942](https://github.com/antjanus/agent-compiler/commit/18de9427822242a8afe178c7a6bc41d9c77a7d78))
+* **03-03:** create embedding module index with unified exports ([46cb534](https://github.com/antjanus/agent-compiler/commit/46cb5348d5678025973a3980f25d884396be3d53))
+* **03-03:** implement merge orchestrator with idempotency and validation ([5ee69e9](https://github.com/antjanus/agent-compiler/commit/5ee69e9df7c537c51552431700572b7e6a72af41))
+* **03-export-command:** add export content generator ([25ab7e5](https://github.com/antjanus/agent-compiler/commit/25ab7e57c7d8e88b9664788d42c4de4570702dfd))
+* **03-export-command:** add relative reference detector utility ([9742776](https://github.com/antjanus/agent-compiler/commit/9742776b5ed4e2f57f0f621c0aac4c05597c31c4))
+* **04-01:** add CLI entry point with argument parsing ([8966968](https://github.com/antjanus/agent-compiler/commit/8966968fed599db2af43fc062676f5fc358752a6))
+* **04-01:** add remark-based heading transformer module ([b0ae7b9](https://github.com/antjanus/agent-compiler/commit/b0ae7b9ed6af4a33059a87ca109959bba180b46f))
+* **04-01:** export transformheadings from embedding index ([2d12451](https://github.com/antjanus/agent-compiler/commit/2d12451bdf864e210d46178564f7a7960b754293))
+* **04-01:** implement help and version display ([3da2c23](https://github.com/antjanus/agent-compiler/commit/3da2c23ff72056290aafa42471d1d3f6c21b5629))
+* **04-02:** create skill and command selection prompts with visual markers ([ff2bbcd](https://github.com/antjanus/agent-compiler/commit/ff2bbcd0cbbec489eea034a4a7ad98a78a592b08))
+* **04-02:** create target and content type selection prompts ([1b3a9a5](https://github.com/antjanus/agent-compiler/commit/1b3a9a57edefb1ea1c9fea37c006c5c7677e4585))
+* **04-02:** integrate heading transformation into compile and export pipelines ([78b2c92](https://github.com/antjanus/agent-compiler/commit/78b2c92bb9b7cd1db83aa4a424e21c6a90f50c5d))
+* **04-03:** add line ending detection and permission checking utilities ([34d34bd](https://github.com/antjanus/agent-compiler/commit/34d34bdf563de957775c421c5c31a9ada646e981))
+* **04-03:** create spinner and actionable error utilities ([36bae5f](https://github.com/antjanus/agent-compiler/commit/36bae5fcaade3e0697c46d35f27490a2b0be62d2))
+* **04-04:** implement compile command with full interactive flow ([c489e25](https://github.com/antjanus/agent-compiler/commit/c489e259820156cda9f3de79c5f0159cedef0ac9))
+* **04-04:** wire compile command into CLI entry point ([14ce328](https://github.com/antjanus/agent-compiler/commit/14ce328f850df8269c5cec5be095262065c78619))
+* **04-05:** integrate line ending preservation into safeWrite ([1efa5b5](https://github.com/antjanus/agent-compiler/commit/1efa5b5c77835f3257c4f19761901e2075a7ad2d))
+* **04-05:** integrate permission checking into safeWrite ([61469b8](https://github.com/antjanus/agent-compiler/commit/61469b89ba86f980d3bfdd43a29982f714c7691d))
+
 # 1.0.0 (2026-02-11)
 
 
